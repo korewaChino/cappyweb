@@ -11,6 +11,10 @@ import '@fontsource/ibm-plex-mono/500-italic.css';
 import '@fontsource/ibm-plex-mono/700-italic.css';
 import '/src/styles/global.css'
 
+import rehypeHighlight from 'rehype-highlight';
 export default function TheApp({ Component, pageProps }) {
-    return <Component {...pageProps} />
+  
+    return <>
+      <Component {...pageProps} />
+    </>
   }

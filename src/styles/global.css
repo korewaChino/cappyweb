@@ -2,17 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --shiki-color-text: #414141;
+    --shiki-color-background: #ff0404ff;
+    --shiki-token-constant: #1976d2;
+    --shiki-token-string: #22863a;
+    --shiki-token-comment: #aaa;
+    --shiki-token-keyword: #d32f2f;
+    --shiki-token-parameter: #ff9800;
+    --shiki-token-function: #6f42c1;
+    --shiki-token-string-expression: #22863a;
+    --shiki-token-punctuation: #212121;
+    --shiki-token-link: #22863a;
+  }
 body{
-    @apply font-body px-4 sm:px-12 lg:px-72 xl:px-96;
+    @apply font-body px-4 sm:px-12 lg:px-72 xl:px-96 leading-8 pb-12;
 }
 h1{
-    @apply text-4xl font-display font-bold;
+    @apply text-4xl font-display font-bold border-b-2 border-slate-600/30 pt-6 mb-4 py-2;
 }
 h2{
-    @apply text-3xl font-display font-bold;
+    @apply text-3xl font-display font-bold pt-4 mb-4 py-2;
 }
 h3{
-    @apply text-2xl font-display font-bold;
+    @apply text-2xl font-display font-bold pt-2 mb-4 py-2;
 }
 h4{
     @apply text-xl;
@@ -27,9 +40,50 @@ h6{
     @apply text-sm;
 }
 ul{
-    @apply list-disc list-inside;
+    @apply list-disc;
+}
+ol{
+    @apply list-decimal;
 
 }
-code{
-    @apply font-monospace;
+li{
+    @apply list-item ml-8;
+}
+a{
+    @apply text-blue-600 underline;
+
+}
+blockquote{
+    @apply border-l-4 border-slate-600/30 pl-4;
+
+}
+
+hr {
+    @apply border-0 border-t-2 border-slate-600/30 my-8;
+
+}
+table {
+    @apply border-slate-600/30 rounded-lg overflow-clip;
+}
+th{
+    @apply bg-slate-600/30 p-2;
+}
+td{
+    @apply p-2 bg-transparent;
+}
+td + td{
+    @apply border-l-2 border-slate-600/30;
+}
+th + th{
+    @apply border-l-2 border-slate-600/30;
+}
+tr:nth-child(odd){
+    @apply bg-slate-400/10;
+}
+tr:nth-child(even){
+    @apply bg-slate-400/20;
+}
+
+pre:has(code){
+    @apply font-monospace bg-slate-100 rounded-xl p-4;
 }

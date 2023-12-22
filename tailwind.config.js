@@ -15,7 +15,11 @@ module.exports = {
         body: ['Inter Variable', 'Sarabun', 'sans-serif'],
         display: ['IBM Plex Sans Thai', 'sans-serif'],
         monospace: ['IBM Plex Mono', 'monospace'],
+      },
+      transitionTimingFunction: {
+        pullout : 'cubic-bezier(0.33, 1.61, 0.06, 0.79)',
       }
+      
     },
   },
   plugins: [],
